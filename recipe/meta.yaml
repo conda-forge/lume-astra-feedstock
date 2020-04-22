@@ -1,5 +1,5 @@
 {% set name = "lume-astra" %}
-{% set version = "0.1.1" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,20 +7,20 @@ package:
 
 source:
   url: https://github.com/ChristopherMayes/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 6723b505bb5a20f140a1531cc94ef3105f257fde0280c43eef661878454adda1
+  sha256: 3e05eb6587e0ea731fb5c49274afcdd8d4c827a95a20a48d615e6bf4fceb9c14
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
-requirements:  
+requirements:
   host:
     - python >=3.6
-    - pip 
+    - pip
   run:
     - python >=3.6
-    - distgen   
+    - distgen
     - numpy
     - openpmd-beamphysics
 
@@ -33,7 +33,7 @@ about:
   license: APACHE-2.0
   license_family: APACHE
   license_file: LICENSE
-  summary: 'Python wrapper for Astra (A Space Charge Tracking Algorithm, DESY) for use in LUME'
+  summary: Python wrapper for Astra (A Space Charge Tracking Algorithm, DESY) for use in LUME
   description: |
     Tools for analyzing and viewing particle data in the openPMD standard,
     extension beamphysics.
