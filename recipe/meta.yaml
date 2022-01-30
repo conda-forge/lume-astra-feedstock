@@ -1,5 +1,5 @@
 {% set name = "lume-astra" %}
-{% set version = "0.4.6" %}
+{% set version = "0.5.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/ChristopherMayes/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: b1c546969baa4ee24f8cfb5f2cbaeef413f58ecfe1f7bd1c69f7a666f26da51a
+  sha256: 189385fc78301693886c42451744cd86c543b9bdbce925c74583acb52a33606c
 
 build:
   noarch: python
