@@ -1,5 +1,5 @@
 {% set name = "lume-astra" %}
-{% set version = "0.5.1" %}
+{% set version = "0.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/ChristopherMayes/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 189385fc78301693886c42451744cd86c543b9bdbce925c74583acb52a33606c
+  sha256: e69e059b45df94e8cbede7c97485dd71dab05a98278d7970776ae60e01f5a8a3
 
 build:
   noarch: python
@@ -16,10 +16,10 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.9
     - pip
   run:
-    - python >=3.6
+    - python >=3.9
     - distgen
     - numpy
     - openpmd-beamphysics
